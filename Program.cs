@@ -9,9 +9,28 @@ namespace GosastePeraject
             Console.WriteLine("Enter two int.");
             var n = Convert.ToInt32(Console.ReadLine());
             var k = Convert.ToInt32(Console.ReadLine());
-            var c = _4thForm(n, k);
+            var c = _5thForm(n, k);
             System.Console.WriteLine($"C = {c}");
             
+        }
+
+
+
+
+
+
+        static int Chose(int n, int k)
+        {
+
+            if (n == k || (k == 0))
+            {
+                return 1;
+            } 
+            else
+            {
+                return (Chose(n - 1, k - 1) + Chose(n - 1, k));
+            }
+
         }
 
         static Int64 StirlingNumber(int n, int k)
@@ -51,6 +70,10 @@ namespace GosastePeraject
                 output += StirlingNumber(n,i);
             }
             return output;
+        }
+        static Int64 _5thForm(int n,int k)
+        {
+            return Chose(n + k - 1,k - 1);
         }
     }
 
