@@ -75,6 +75,10 @@ namespace GosastePeraject
         {
             return Chose(n + k - 1,k - 1);
         }
+        static Int64 _6thForm(int n,int k)
+        {
+            return Chose(n-1,k-1);
+        }
     }
 
 
