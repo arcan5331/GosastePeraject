@@ -9,12 +9,12 @@ namespace GosastePeraject
             Console.WriteLine("Enter two int.");
             var n = Convert.ToInt32(Console.ReadLine());
             var k = Convert.ToInt32(Console.ReadLine());
-            var c = StarlingNumber(n, k);
+            var c = StirlingNumber(n, k);
             System.Console.WriteLine($"Starling number = {c}");
             System.Console.WriteLine($"Output = {SecendForm(n, k)}");
         }
 
-        static Int64 StarlingNumber(int n, int k)
+        static Int64 StirlingNumber(int n, int k)
         {
             Int64 output = 0;
             for (int i = 0; i < k; i++)
@@ -36,7 +36,11 @@ namespace GosastePeraject
             {
                 output *= i;
             }
-            return output * StarlingNumber(n,k);
+            return output * StirlingNumber(n,k);
+        }
+        static Int64 ThirdForm(int n,int k)
+        {
+            return StirlingNumber(n,k);
         }
     }
 
