@@ -18,7 +18,7 @@ namespace GosastePeraject
         static int C(int n, int k)
         {
 
-            if (n == k || (k == 0) || (n == 1 && k == 1) || (n == 0 && k == 0))
+            if (n == k || (k == 0))
             {
                 return 1;
             } 
