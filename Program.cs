@@ -11,11 +11,11 @@ namespace GosastePeraject
             var a = Convert.ToInt32(Console.ReadLine());
             var b = Convert.ToInt32(Console.ReadLine());
 
-            var c = C(a, b);
+            var c = Chose(a, b);
             Console.WriteLine($"c = {c}\n");
         }
 
-        static int C(int n, int k)
+        static int Chose(int n, int k)
         {
 
             if (n == k || (k == 0))
@@ -24,7 +24,7 @@ namespace GosastePeraject
             } 
             else
             {
-                return (C(n - 1, k - 1) + C(n - 1, k));
+                return (Chose(n - 1, k - 1) + Chose(n - 1, k));
             }
 
         }
