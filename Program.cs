@@ -18,22 +18,10 @@ namespace GosastePeraject
         static int C(int n, int k)
         {
 
-            if (n == k)
+            if (n == k || (k == 0) || (n == 1 && k == 1) || (n == 0 && k == 0))
             {
                 return 1;
             } 
-            else if (n == 1 && k == 1)
-            {
-                return 1;
-            }
-            else if (n == 0 && k == 0)
-            {
-                return 1;
-            }
-            else if (k == 0)
-            {
-                return 1;
-            }
             else
             {
                 return (C(n - 1, k - 1) + C(n - 1, k));
